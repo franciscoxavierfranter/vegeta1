@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:paddingBottom="16dp"
+android:background="#728AD55C"
+android:paddingLeft="16dp"
+android:paddingRight="16dp"
+android:paddingTop="16dp">
+    <TextView
+        android:id="@+id/tvSaludo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Saludo"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+
+    <LinearLayout
+        android:id="@+id/scrolLayout"
+        android:layout_width="395dp"
+        android:layout_height="670dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <ScrollView
+            android:id="@+id/scrollView3"
+            android:layout_width="357dp"
+            android:layout_height="604dp"
+            android:layout_marginTop="30dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="50dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nuestra Comunidad"
+                    android:shadowColor="#B1A9C5"
+                    android:background="#77C57F"
+                    android:textAlignment="center"
+                    android:textSize="30dp" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="@string/NuestraApp"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/titulospinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nuestros Profesionales"
+                    android:shadowColor="#B1A9C5"
+                    android:background="#77C57F"
+                    android:layout_marginVertical="30dp"
+                    android:textAlignment="center"
+                    android:textSize="30dp" />
+
+                <Spinner
+                    android:id="@+id/id_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@android:color/black"/>
+
+                <Button
+                    android:id="@+id/btnProfesional"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:onClick="btnProfesional"
+                    android:text="@string/btnProfesional"/>
+
+                <TextView
+                    android:id="@+id/titulomapa"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="Encuentra Tu Lugar"
+                    android:shadowColor="#B1A9C5"
+                    android:background="#77C57F"
+                    android:layout_marginVertical="30dp"
+                    android:textSize="30dp" />
+                <Button
+                    android:id="@+id/btnMapa"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:onClick="btnMapa"
+                    android:text="@string/btnMapa"/>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+
+</RelativeLayout>

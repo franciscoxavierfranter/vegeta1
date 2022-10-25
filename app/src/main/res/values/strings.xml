@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">VegetableLife</string>
+
+    <string name="mapbox_access_token">pk.eyJ1IjoiZnJhbnRlciIsImEiOiJjbDlucGZka3MwYWJzM29uc212dmV6ajV0In0.DzCeHNNwpIueyDVZhlvkog</string>
+
+    <string name="btnIngresa">Ingresa</string>
+    <string name="btnProfesional">Consulta Profesional</string>
+    <string name="btnMapa">Consulta Ubicación</string>
+    <string name="tv1">PrimerActivity</string>
+    <string name="splash">Vegetable Life</string>
+    <string name="Saludo">Bienvenido a VegetableLife, </string>
+    <string name="TituloSegundoActivity">Bienvenido a Vegetable Life!</string>
+    <string name="NuestraApp">Esta aplicación está desarrollada por una comunidad de personas que buscan la difusión del bienestar corporal y mental mediante la utilización de comida saludable vegetal, generando alianzas con profesionales de la salud independientes, acercando así este estilo de vida a la comunidad</string>
+    <string name="title_activity_maps">MapsActivity</string>
+</resources>
