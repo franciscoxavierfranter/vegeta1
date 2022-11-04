@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-feature android:name="android.hardware.location.gps"/>
 
     <application
         android:allowBackup="true"
@@ -52,7 +53,24 @@
         </activity>
         <activity
             android:name=".SegundoActivity"
-            android:label="@string/TituloSegundoActivity"></activity>
+            android:label="@string/TituloSegundoActivity">
+        </activity>
+        <activity
+            android:name=".NutricionistaActivity"
+            android:label="@string/TituloSegundoActivity">
+        </activity>
+        <activity
+            android:name=".MedicoActivity"
+            android:label="@string/TituloSegundoActivity">
+        </activity>
+        <activity
+            android:name=".EntrenadorActivity"
+            android:label="@string/TituloSegundoActivity">
+        </activity>
+        <activity
+            android:name=".PsicologoActivity"
+            android:label="@string/TituloSegundoActivity">
+        </activity>
     </application>
 
 </manifest>

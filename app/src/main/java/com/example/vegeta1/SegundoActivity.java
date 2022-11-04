@@ -44,6 +44,45 @@ public class SegundoActivity extends AppCompatActivity {
 
     public void btnProfesional(View view){
         Toast.makeText(this,spinnerProfesional.getSelectedItem().toString(),Toast.LENGTH_SHORT).show();
+        String ProfSeleccion = spinnerProfesional.getSelectedItem().toString();
+        if(ProfSeleccion.equals("Nutricionista")){
+            Intent intentNutri = new Intent(this,NutricionistaActivity.class);
+            Button btnProfesional = findViewById(R.id.btnProfesional);
+            btnProfesional.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    startActivity(intentNutri);
+                }
+            });
+        }else if(ProfSeleccion.equals("Médico")){
+            Intent intentMed = new Intent(this,MedicoActivity.class);
+            Button btnProfesional = findViewById(R.id.btnProfesional);
+            btnProfesional.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    startActivity(intentMed);
+                }
+            });
+        }else if(ProfSeleccion.equals("Entrenador")){
+            Intent intentEntrenador = new Intent(this,EntrenadorActivity.class);
+            Button btnProfesional = findViewById(R.id.btnProfesional);
+            btnProfesional.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    startActivity(intentEntrenador);
+                }
+            });
+        }else if(ProfSeleccion.equals("Psicólogo")){
+            Intent intentPsico = new Intent(this,PsicologoActivity.class);
+            Button btnProfesional = findViewById(R.id.btnProfesional);
+            btnProfesional.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    startActivity(intentPsico);
+                }
+            });
+        }
+
     }
 
     public void btnMapa(View v){

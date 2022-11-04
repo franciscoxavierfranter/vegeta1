@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/image_entrenadorcover"
+        android:src="@drawable/entrena_cover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/titulo_agendaentrenador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:text="¡Agenda tu cita Online!"
+            android:background="@drawable/shape"
+            android:textAlignment="center"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/nombre_agendaentrenador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titulo_agendaentrenador"
+            android:background="@drawable/shape"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="50dp"
+            android:textColor="@color/white"
+            android:text="Escribe tu Nombre" />
+
+        <EditText
+            android:id="@+id/txtnombre_agendaentrenador"
+            android:layout_width="191dp"
+            android:layout_height="46dp"
+            android:layout_below="@id/titulo_agendaentrenador"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="31dp"
+            android:layout_toRightOf="@+id/nombre_agendaentrenador"
+            android:background="@drawable/shape"
+            android:inputType="textPersonName"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/correo_agendaentrenador"
+            android:layout_width="wrap_content"
+            android:layout_below="@id/titulo_agendaentrenador"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/shape"
+            android:textColor="@color/white"
+            android:layout_marginLeft="30dp"
+            android:text="Escribe tu Correo"/>
+
+        <EditText
+            android:id="@+id/txtcorreo_agendaentrenador"
+            android:layout_width="191dp"
+            android:layout_height="44dp"
+            android:layout_below="@id/titulo_agendaentrenador"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="82dp"
+            android:layout_toRightOf="@+id/nombre_agendaentrenador"
+            android:background="@drawable/shape"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/edad_agendaentrenador"
+            android:layout_width="wrap_content"
+            android:textColor="@color/white"
+            android:layout_below="@id/titulo_agendaentrenador"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="150dp"
+            android:background="@drawable/shape"
+            android:layout_marginLeft="30dp"
+            android:text="Escribe tu Edad"/>
+
+        <EditText
+            android:id="@+id/txtedad_agendaentrenador"
+            android:layout_width="192dp"
+            android:layout_height="41dp"
+            android:layout_below="@id/titulo_agendaentrenador"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="132dp"
+            android:layout_toRightOf="@+id/nombre_agendaentrenador"
+            android:background="@drawable/shape"
+            android:inputType="number"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btnAgendaCita"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/txtedad_agendaentrenador"
+            android:layout_below="@id/txtedad_agendaentrenador"
+            android:layout_marginTop="30dp"
+            android:onClick="btnProfesional"
+            android:text="@string/btn_agenda_cita"/>
+
+
+    </RelativeLayout>
+
+</FrameLayout>

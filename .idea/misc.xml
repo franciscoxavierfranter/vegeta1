@@ -3,12 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/frant/AndroidStudioProjects/Vegeta1/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/frant/AndroidStudioProjects/Vegeta1/app/src/main/res/drawable/ic_manzana_bmp_background.xml" value="0.196" />
+        <entry key="..\:/Users/frant/AndroidStudioProjects/Vegeta1/app/src/main/res/drawable/shape.xml" value="0.293" />
+        <entry key="..\:/Users/frant/AndroidStudioProjects/Vegeta1/app/src/main/res/layout/activity_entrenador.xml" value="0.25" />
+        <entry key="..\:/Users/frant/AndroidStudioProjects/Vegeta1/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/frant/AndroidStudioProjects/Vegeta1/app/src/main/res/layout/activity_map.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/frant/AndroidStudioProjects/Vegeta1/app/src/main/res/layout/activity_maps.xml" value="0.24322916666666666" />
+        <entry key="..\:/Users/frant/AndroidStudioProjects/Vegeta1/app/src/main/res/layout/activity_medico.xml" value="0.33" />
+        <entry key="..\:/Users/frant/AndroidStudioProjects/Vegeta1/app/src/main/res/layout/activity_nutricionista.xml" value="0.33" />
+        <entry key="..\:/Users/frant/AndroidStudioProjects/Vegeta1/app/src/main/res/layout/activity_psicologo.xml" value="0.365625" />
         <entry key="..\:/Users/frant/AndroidStudioProjects/Vegeta1/app/src/main/res/layout/activity_segundo.xml" value="0.25" />
         <entry key="..\:/Users/frant/AndroidStudioProjects/Vegeta1/app/src/main/res/layout/activity_splash.xml" value="0.22" />
         <entry key="..\:/Users/frant/AndroidStudioProjects/Vegeta1/app/src/main/res/layout/itemspinner.xml" value="0.33" />
+        <entry key="..\:/Users/frant/AndroidStudioProjects/Vegeta1/app/src/main/res/mipmap-anydpi-v26/ic_manzana_bmp.xml" value="0.196" />
       </map>
     </option>
   </component>

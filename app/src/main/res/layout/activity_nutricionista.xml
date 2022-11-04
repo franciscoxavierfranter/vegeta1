@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/image_nutricover"
+        android:src="@drawable/nutri_cover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/titulo_agendanutri"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="¡Agenda tu cita Online!"
+            android:textAlignment="center"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/nombre_agendanutri"
+            android:layout_width="wrap_content"
+            android:layout_below="@id/titulo_agendanutri"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="30dp"
+            android:text="Escribe tu Nombre"/>
+
+        <EditText
+            android:id="@+id/txtnombre_agendanutri"
+            android:layout_width="192dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titulo_agendanutri"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="31dp"
+            android:layout_toRightOf="@+id/nombre_agendanutri"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/correo_agendanutri"
+            android:layout_width="wrap_content"
+            android:layout_below="@id/titulo_agendanutri"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="30dp"
+            android:text="Escribe tu Correo"/>
+
+        <EditText
+            android:id="@+id/txtcorreo_agendanutri"
+            android:layout_width="192dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titulo_agendanutri"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="82dp"
+            android:layout_toRightOf="@+id/nombre_agendanutri"
+            android:inputType="textEmailAddress" />
+
+        <TextView
+            android:id="@+id/edad_agendanutri"
+            android:layout_width="wrap_content"
+            android:layout_below="@id/titulo_agendanutri"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="150dp"
+            android:layout_marginLeft="30dp"
+            android:text="Escribe tu Edad"/>
+
+        <EditText
+            android:id="@+id/txtedad_agendanutri"
+            android:layout_width="187dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titulo_agendanutri"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="132dp"
+            android:layout_toRightOf="@+id/nombre_agendanutri"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/btnAgendaCita"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/txtedad_agendanutri"
+            android:layout_below="@id/txtedad_agendanutri"
+            android:layout_marginTop="30dp"
+            android:onClick="btnProfesional"
+            android:text="@string/btn_agenda_cita"/>
+
+
+    </RelativeLayout>
+
+</FrameLayout>

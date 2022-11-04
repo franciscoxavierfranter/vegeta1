@@ -8,8 +8,9 @@
     <string name="btnMapa">Consulta Ubicación</string>
     <string name="tv1">PrimerActivity</string>
     <string name="splash">Vegetable Life</string>
-    <string name="Saludo">Bienvenido a VegetableLife, </string>
+    <string name="Saludo">Bienvenido a VegetableLife,\n </string>
     <string name="TituloSegundoActivity">Bienvenido a Vegetable Life!</string>
     <string name="NuestraApp">Esta aplicación está desarrollada por una comunidad de personas que buscan la difusión del bienestar corporal y mental mediante la utilización de comida saludable vegetal, generando alianzas con profesionales de la salud independientes, acercando así este estilo de vida a la comunidad</string>
     <string name="title_activity_maps">MapsActivity</string>
+    <string name="btn_agenda_cita">¡Solicita tu Contacto!</string>
 </resources>

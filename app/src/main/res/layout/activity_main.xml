@@ -1,54 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/cardview_dark_background"
     tools:context=".MainActivity">
-
     <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="284dp"
-        android:layout_height="194dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/ic_manzana_entrar_foreground" />
-
-    <EditText
-        android:id="@+id/textUsuario"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:ems="10"
-        android:hint="Usuario"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+        android:src="@drawable/splash_back"
+        android:scaleType="fitXY"
+        />
 
-    <EditText
-        android:id="@+id/numericContrasena"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:ems="10"
-        android:hint="Contraseña"
-        android:inputType="numberPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textUsuario" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/btnIngresa"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="284dp"
+            android:layout_height="194dp"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/manzanitasplash" />
 
-        android:text="@string/btnIngresa"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/numericContrasena" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/textInicio"
+            android:layout_width="450dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageView4"
+            android:layout_marginTop="20dp"
+            android:text="@string/splash"
+            android:textAlignment="center"
+            android:textColor="#32548E"
+            android:textSize="30dp"/>
+
+        <EditText
+            android:id="@+id/textUsuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_below="@+id/textInicio"
+            android:ems="10"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:hint="Usuario"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+        <EditText
+            android:id="@+id/numericContrasena"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/textUsuario"
+            android:ems="10"
+            android:hint="Contraseña"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:inputType="numberPassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textUsuario" />
+
+        <Button
+            android:id="@+id/btnIngresa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_below="@+id/numericContrasena"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/btnIngresa"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/numericContrasena" />
+
+    </RelativeLayout>
+</FrameLayout>
