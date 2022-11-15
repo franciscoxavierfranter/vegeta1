@@ -13,4 +13,14 @@
     <string name="NuestraApp">Esta aplicación está desarrollada por una comunidad de personas que buscan la difusión del bienestar corporal y mental mediante la utilización de comida saludable vegetal, generando alianzas con profesionales de la salud independientes, acercando así este estilo de vida a la comunidad</string>
     <string name="title_activity_maps">MapsActivity</string>
     <string name="btn_agenda_cita">¡Solicita tu Contacto!</string>
+    <string name="btnLeer">Revisar Citas</string>
+    <string name="btn_volver_menu">Volver al Menu</string>
+    <string name="temp">¿Cómo va el calor?</string>
+    <string name="calor">Tiempo al Momento</string>
+    <string name="btnTemp">Tiempo al Momento</string>
+    <string name="action_settings">Settings</string>
+    <string name="realizadores">Realizado por: Panchitox</string>
+    <string name="referencia">Referencia de sonido</string>
+    <string name="uPa">Sonido en Pa</string>
+    <string name="dB">Sonido en dB</string>
 </resources>

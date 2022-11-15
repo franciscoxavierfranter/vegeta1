@@ -101,6 +101,38 @@ android:paddingTop="16dp">
 
                     android:onClick="btnMapa"
                     android:text="@string/btnMapa"/>
+                <TextView
+                    android:id="@+id/tituloLeer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="Revisa tus citas agendadas"
+                    android:shadowColor="#B1A9C5"
+                    android:background="#77C57F"
+                    android:layout_marginVertical="30dp"
+                    android:textSize="30dp" />
+                <Button
+                    android:id="@+id/btnLeer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:onClick="btnLeer"
+                    android:text="@string/btnLeer"/>
+                <TextView
+                    android:id="@+id/tituloTemp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="Te Apetece un Juguito?"
+                    android:shadowColor="#B1A9C5"
+                    android:background="#77C57F"
+                    android:layout_marginVertical="30dp"
+                    android:textSize="30dp" />
+                <Button
+                    android:id="@+id/btnTemp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:onClick="btnTemp"
+                    android:text="@string/btnTemp"/>
             </LinearLayout>
         </ScrollView>
     </LinearLayout>

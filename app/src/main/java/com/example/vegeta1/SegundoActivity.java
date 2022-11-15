@@ -6,14 +6,18 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import java.util.ArrayList;
 
 public class SegundoActivity extends AppCompatActivity {
 
@@ -23,24 +27,33 @@ public class SegundoActivity extends AppCompatActivity {
     int[] vprofesional = {R.drawable.vnutri, R.drawable.vmedico, R.drawable.ventrena, R.drawable.vpsico,};
     Spinner spinnerProfesional;
     Button btnMapa;
+    Button btnLeer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_segundo);
-        tvSaludo = (TextView) findViewById(R.id.tvSaludo);
-        bundle = getIntent().getExtras();
-        String saludo = bundle.getString("nombre");
-        tvSaludo.append(" " + saludo + " :D");
+        //tvSaludo = (TextView) findViewById(R.id.tvSaludo);
+        //bundle = getIntent().getExtras();
+        //String saludo = bundle.getString("nombre");
+        //tvSaludo.append(" " + saludo + " :D");
 
         //https://www.youtube.com/watch?v=yBQny_Mt73M spinner
         spinnerProfesional=findViewById(R.id.id_spinner);
         ProfesionalesAdapter profesionalesAdapter = new ProfesionalesAdapter();
         spinnerProfesional.setAdapter(profesionalesAdapter);
 
-
     }
 
+    public void btnLeer(View view){
+        Intent intentLeer = new Intent(this,Leer.class);
+        startActivity(intentLeer);
+    }
+
+    public void btnTemp(View view){
+        Intent intentTemp = new Intent(this,Temperature.class);
+        startActivity(intentTemp);
+    }
 
     public void btnProfesional(View view){
         Toast.makeText(this,spinnerProfesional.getSelectedItem().toString(),Toast.LENGTH_SHORT).show();

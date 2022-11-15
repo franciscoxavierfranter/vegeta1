@@ -65,11 +65,11 @@
         <TextView
             android:id="@+id/edad_agendapsicologo"
             android:layout_width="wrap_content"
-            android:layout_below="@id/titulo_agendapsicologo"
             android:layout_height="wrap_content"
-            android:layout_marginTop="150dp"
+            android:layout_below="@id/titulo_agendapsicologo"
             android:layout_marginLeft="30dp"
-            android:text="Escribe tu Edad"/>
+            android:layout_marginTop="150dp"
+            android:text="Escribe tu Edad" />
 
         <EditText
             android:id="@+id/txtedad_agendapsicologo"

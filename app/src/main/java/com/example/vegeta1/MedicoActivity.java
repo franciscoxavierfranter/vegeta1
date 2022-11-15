@@ -4,6 +4,8 @@ import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.content.Context;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteStatement;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
@@ -57,15 +59,49 @@ public class MedicoActivity extends AppCompatActivity {
                     mensaje+= "Nombre: " + nombre + ", Edad: " + edad.toString() + ", Correo: " + correo;
                     int notificaID = 1;
                     Notificar(titulo, mensaje, notificaID);
+                    insertar();
                     Toast.makeText(getApplicationContext(), titulo, Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(MedicoActivity.this, SegundoActivity.class);
                     startActivity(intent);
-
                 }
                 if(!enviar) Toast.makeText(getApplicationContext(), mensaje, Toast.LENGTH_SHORT).show();
             }
         });
     }
+
+    public void insertar()
+    {
+        try
+        {
+            String nombre = txtNombre.getText().toString();
+            String correo = txtCorreo.getText().toString();
+            String edad = txtEdad.getText().toString();
+            String profesional = "Medicina";
+
+            SQLiteDatabase db = openOrCreateDatabase("BD_EJEMPLO", Context.MODE_PRIVATE,null);
+            db.execSQL("CREATE TABLE IF NOT EXISTS persona2(id INTEGER PRIMARY KEY AUTOINCREMENT,nombre VARCHAR,apellido VARCHAR,edad VARCHAR,profesional VARCHAR)");
+
+            String sql = "insert into persona2(nombre,apellido,edad,profesional)values(?,?,?,?)";
+            SQLiteStatement statement = db.compileStatement(sql);
+            statement.bindString(1,nombre);
+            statement.bindString(2,correo);
+            statement.bindString(3,edad);
+            statement.bindString(4,profesional);
+            statement.execute();
+            Toast.makeText(this,"Datos agregados satisfactoriamente en la base de datos.",Toast.LENGTH_LONG).show();
+
+            txtNombre.setText("");
+            txtCorreo.setText("");
+            txtEdad.setText("");
+            //txtProf.setText("");
+            txtNombre.requestFocus();
+        }
+        catch (Exception ex)
+        {
+            Toast.makeText(this,"Error no se pudieron guardar los datos.",Toast.LENGTH_LONG).show();
+        }
+    }
+
     // Método que crea y envía la notificación
     public void Notificar(String titulo, String mensaje, int notID){
         NotificationCompat.Builder creador;
