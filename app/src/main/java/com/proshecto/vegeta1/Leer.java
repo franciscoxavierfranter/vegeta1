@@ -1,4 +1,4 @@
-package com.example.vegeta1;
+package com.proshecto.vegeta1;
 
 import android.content.Context;
 import android.content.Intent;
@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -19,7 +18,7 @@ import java.util.ArrayList;
 public class Leer extends AppCompatActivity {
     private ListView lst1;
     private ArrayList<String> arreglo = new ArrayList<String>();
-    private ArrayAdapter arrayAdapter;
+    private ArrayAdapter<String> arrayAdapter;
 
 
     @Override
@@ -39,7 +38,7 @@ public class Leer extends AppCompatActivity {
             int prof = c.getColumnIndex("profesional");
             arreglo.clear();
 
-            arrayAdapter = new ArrayAdapter(this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item,arreglo);
+            arrayAdapter = new ArrayAdapter<String>(this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item,arreglo);
 
             lst1.setAdapter(arrayAdapter);
 

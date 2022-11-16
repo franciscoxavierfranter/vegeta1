@@ -1,9 +1,8 @@
-package com.example.vegeta1;
+package com.proshecto.vegeta1;
 
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.content.Context;
-import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteStatement;
 import android.graphics.Bitmap;

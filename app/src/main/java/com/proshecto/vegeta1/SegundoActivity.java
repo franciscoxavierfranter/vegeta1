@@ -1,4 +1,4 @@
-package com.example.vegeta1;
+package com.proshecto.vegeta1;
 
 
 import android.content.Intent;
@@ -6,18 +6,14 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import java.util.ArrayList;
 
 public class SegundoActivity extends AppCompatActivity {
 
@@ -59,54 +55,31 @@ public class SegundoActivity extends AppCompatActivity {
         Toast.makeText(this,spinnerProfesional.getSelectedItem().toString(),Toast.LENGTH_SHORT).show();
         String ProfSeleccion = spinnerProfesional.getSelectedItem().toString();
         if(ProfSeleccion.equals("Nutricionista")){
-            Intent intentNutri = new Intent(this,NutricionistaActivity.class);
-            Button btnProfesional = findViewById(R.id.btnProfesional);
-            btnProfesional.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    startActivity(intentNutri);
-                }
-            });
+            Intent intentNutri = new Intent(this,MedicoActivity.class);
+            startActivity(intentNutri);
         }else if(ProfSeleccion.equals("Médico")){
             Intent intentMed = new Intent(this,MedicoActivity.class);
-            Button btnProfesional = findViewById(R.id.btnProfesional);
-            btnProfesional.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    startActivity(intentMed);
-                }
-            });
+            startActivity(intentMed);
         }else if(ProfSeleccion.equals("Entrenador")){
             Intent intentEntrenador = new Intent(this,EntrenadorActivity.class);
-            Button btnProfesional = findViewById(R.id.btnProfesional);
-            btnProfesional.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    startActivity(intentEntrenador);
-                }
-            });
+            startActivity(intentEntrenador);
         }else if(ProfSeleccion.equals("Psicólogo")){
             Intent intentPsico = new Intent(this,PsicologoActivity.class);
-            Button btnProfesional = findViewById(R.id.btnProfesional);
-            btnProfesional.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    startActivity(intentPsico);
-                }
-            });
+            startActivity(intentPsico);
         }
 
     }
 
     public void btnMapa(View v){
         Intent intentMapa = new Intent(this,MapsActivity.class);
-        Button btnMapa = findViewById(R.id.btnMapa);
+        startActivity(intentMapa);
+        /*Button btnMapa = findViewById(R.id.btnMapa);
         btnMapa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(intentMapa);
             }
-        });
+        });*/
     }
 
     class ProfesionalesAdapter extends BaseAdapter {

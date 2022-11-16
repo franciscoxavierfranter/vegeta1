@@ -1,4 +1,4 @@
-package com.example.vegeta1;
+package com.proshecto.vegeta1;
 
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
@@ -19,7 +19,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationCompat;
 
-public class MedicoActivity extends AppCompatActivity {
+public class PsicologoActivity extends AppCompatActivity {
     private EditText txtNombre;
     private EditText txtCorreo;
     private EditText txtEdad;
@@ -27,10 +27,10 @@ public class MedicoActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_medico);
-        txtNombre = (EditText) findViewById(R.id.txtnombre_agendamedico);
-        txtCorreo = (EditText) findViewById(R.id.txtcorreo_agendamedico);
-        txtEdad = (EditText) findViewById(R.id.txtedad_agendamedico);
+        setContentView(R.layout.activity_psicologo);
+        txtNombre = (EditText) findViewById(R.id.txtnombre_agendapsicologo);
+        txtCorreo = (EditText) findViewById(R.id.txtcorreo_agendapsicologo);
+        txtEdad = (EditText) findViewById(R.id.txtedad_agendapsicologo);
         btnAgendaCita = (Button) findViewById(R.id.btnAgendaCita);
         btnAgendaCita.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,21 +54,23 @@ public class MedicoActivity extends AppCompatActivity {
                     mensaje+="Necesitas anotar tu correo!";
                 }
                 if(enviar){
-                    String titulo = "Tu profesional de Medicina te contactará";
+                    String titulo = "Tu profesional de Psicología te contactará";
                     mensaje = "Tus datos son:\n";
                     mensaje+= "Nombre: " + nombre + ", Edad: " + edad.toString() + ", Correo: " + correo;
                     int notificaID = 1;
                     Notificar(titulo, mensaje, notificaID);
                     insertar();
                     Toast.makeText(getApplicationContext(), titulo, Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(MedicoActivity.this, SegundoActivity.class);
+                    Intent intent = new Intent(PsicologoActivity.this, SegundoActivity.class);
                     startActivity(intent);
+
                 }
                 if(!enviar) Toast.makeText(getApplicationContext(), mensaje, Toast.LENGTH_SHORT).show();
             }
         });
     }
 
+    //metodo insertar SQLite
     public void insertar()
     {
         try
@@ -76,7 +78,7 @@ public class MedicoActivity extends AppCompatActivity {
             String nombre = txtNombre.getText().toString();
             String correo = txtCorreo.getText().toString();
             String edad = txtEdad.getText().toString();
-            String profesional = "Medicina";
+            String profesional = "Psicología";
 
             SQLiteDatabase db = openOrCreateDatabase("BD_EJEMPLO", Context.MODE_PRIVATE,null);
             db.execSQL("CREATE TABLE IF NOT EXISTS persona2(id INTEGER PRIMARY KEY AUTOINCREMENT,nombre VARCHAR,apellido VARCHAR,edad VARCHAR,profesional VARCHAR)");
@@ -93,7 +95,6 @@ public class MedicoActivity extends AppCompatActivity {
             txtNombre.setText("");
             txtCorreo.setText("");
             txtEdad.setText("");
-            //txtProf.setText("");
             txtNombre.requestFocus();
         }
         catch (Exception ex)
@@ -122,8 +123,8 @@ public class MedicoActivity extends AppCompatActivity {
             notificador.createNotificationChannel(miCanal);
             creador = new NotificationCompat.Builder(contexto, canalID);
         }
-        Bitmap iconoNotifica = BitmapFactory.decodeResource(contexto.getResources(), R.drawable.vmedico);
-        int iconoSmall = R.drawable.vmedico;
+        Bitmap iconoNotifica = BitmapFactory.decodeResource(contexto.getResources(), R.drawable.vpsico);
+        int iconoSmall = R.drawable.vpsico;
         creador.setSmallIcon(iconoSmall);
         creador.setLargeIcon(iconoNotifica);
         creador.setContentTitle(titulo);

@@ -1,4 +1,4 @@
-package com.example.vegeta1;
+package com.proshecto.vegeta1;
 
 public class Persona2 {
     protected String id;

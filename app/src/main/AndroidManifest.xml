@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.vegeta1">
+    package="com.proshecto.vegeta1">
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -34,7 +34,7 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBf8hxieh6H0SZfOBAfzT5N9iLw72VdMMA" />
         <activity
-            android:name=".SplashActivity"
+            android:name="com.proshecto.vegeta1.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -44,44 +44,44 @@
         </activity>
 
         <activity
-            android:name=".MainActivity"
+            android:name="com.proshecto.vegeta1.MainActivity"
             android:exported="true"
             android:label="@string/TituloSegundoActivity"></activity>
 
         <activity
-            android:name=".SegundoActivity"
+            android:name="com.proshecto.vegeta1.SegundoActivity"
             android:label="@string/TituloSegundoActivity">
         </activity>
         <activity
-            android:name=".Leer"
+            android:name="com.proshecto.vegeta1.Leer"
             android:label="@string/TituloSegundoActivity">
         </activity>
         <activity
-            android:name=".Editar"
+            android:name="com.proshecto.vegeta1.Editar"
             android:label="@string/TituloSegundoActivity">
         </activity>
         <activity
-            android:name=".NutricionistaActivity"
+            android:name="com.proshecto.vegeta1.NutricionistaActivity"
             android:label="@string/TituloSegundoActivity">
         </activity>
         <activity
-            android:name=".MedicoActivity"
+            android:name="com.proshecto.vegeta1.MedicoActivity"
             android:label="@string/TituloSegundoActivity">
         </activity>
         <activity
-            android:name=".EntrenadorActivity"
+            android:name="com.proshecto.vegeta1.EntrenadorActivity"
             android:label="@string/TituloSegundoActivity">
         </activity>
         <activity
-            android:name=".PsicologoActivity"
+            android:name="com.proshecto.vegeta1.PsicologoActivity"
             android:label="@string/TituloSegundoActivity">
         </activity>
         <activity
-            android:name=".MapsActivity"
+            android:name="com.proshecto.vegeta1.MapsActivity"
             android:exported="false"
             android:label="@string/title_activity_maps" />
         <activity
-            android:name=".Temperature"
+            android:name="com.proshecto.vegeta1.Temperature"
             android:label="@string/calor">
         </activity>
     </application>

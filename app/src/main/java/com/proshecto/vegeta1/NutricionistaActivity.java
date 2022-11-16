@@ -1,4 +1,7 @@
-package com.example.vegeta1;
+package com.proshecto.vegeta1;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
 
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
@@ -16,10 +19,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.NotificationCompat;
-
-public class PsicologoActivity extends AppCompatActivity {
+public class NutricionistaActivity extends AppCompatActivity {
     private EditText txtNombre;
     private EditText txtCorreo;
     private EditText txtEdad;
@@ -27,10 +27,10 @@ public class PsicologoActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_psicologo);
-        txtNombre = (EditText) findViewById(R.id.txtnombre_agendapsicologo);
-        txtCorreo = (EditText) findViewById(R.id.txtcorreo_agendapsicologo);
-        txtEdad = (EditText) findViewById(R.id.txtedad_agendapsicologo);
+        setContentView(R.layout.activity_nutricionista);
+        txtNombre = (EditText) findViewById(R.id.txtnombre_agendanutri);
+        txtCorreo = (EditText) findViewById(R.id.txtcorreo_agendanutri);
+        txtEdad = (EditText) findViewById(R.id.txtedad_agendanutri);
         btnAgendaCita = (Button) findViewById(R.id.btnAgendaCita);
         btnAgendaCita.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,16 +54,15 @@ public class PsicologoActivity extends AppCompatActivity {
                     mensaje+="Necesitas anotar tu correo!";
                 }
                 if(enviar){
-                    String titulo = "Tu profesional de Psicología te contactará";
-                    mensaje = "Tus datos son:\n";
+                    String titulo = "Tu profesional de Nutrición se pondra en contacto contigo";
+                    mensaje = "Tus datos fueron:\n";
                     mensaje+= "Nombre: " + nombre + ", Edad: " + edad.toString() + ", Correo: " + correo;
                     int notificaID = 1;
                     Notificar(titulo, mensaje, notificaID);
                     insertar();
                     Toast.makeText(getApplicationContext(), titulo, Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(PsicologoActivity.this, SegundoActivity.class);
+                    Intent intent = new Intent(NutricionistaActivity.this, SegundoActivity.class);
                     startActivity(intent);
-
                 }
                 if(!enviar) Toast.makeText(getApplicationContext(), mensaje, Toast.LENGTH_SHORT).show();
             }
@@ -78,7 +77,7 @@ public class PsicologoActivity extends AppCompatActivity {
             String nombre = txtNombre.getText().toString();
             String correo = txtCorreo.getText().toString();
             String edad = txtEdad.getText().toString();
-            String profesional = "Psicología";
+            String profesional = "Nutricionista";
 
             SQLiteDatabase db = openOrCreateDatabase("BD_EJEMPLO", Context.MODE_PRIVATE,null);
             db.execSQL("CREATE TABLE IF NOT EXISTS persona2(id INTEGER PRIMARY KEY AUTOINCREMENT,nombre VARCHAR,apellido VARCHAR,edad VARCHAR,profesional VARCHAR)");
@@ -123,8 +122,8 @@ public class PsicologoActivity extends AppCompatActivity {
             notificador.createNotificationChannel(miCanal);
             creador = new NotificationCompat.Builder(contexto, canalID);
         }
-        Bitmap iconoNotifica = BitmapFactory.decodeResource(contexto.getResources(), R.drawable.vpsico);
-        int iconoSmall = R.drawable.vpsico;
+        Bitmap iconoNotifica = BitmapFactory.decodeResource(contexto.getResources(), R.drawable.vnutri);
+        int iconoSmall = R.drawable.vnutri;
         creador.setSmallIcon(iconoSmall);
         creador.setLargeIcon(iconoNotifica);
         creador.setContentTitle(titulo);

@@ -1,4 +1,4 @@
-package com.example.vegeta1;
+package com.proshecto.vegeta1;
 
 import android.content.Context;
 import android.content.Intent;
