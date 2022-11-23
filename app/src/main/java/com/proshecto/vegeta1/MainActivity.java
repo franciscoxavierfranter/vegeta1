@@ -51,11 +51,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(awesomeValidation.validate()){
-                    String emailUser = emailView.getText().toString().trim();
-                    String passUser = passw.getText().toString().trim();
+                    String emailUser = emailView.getText().toString();
+                    String passUser = passw.getText().toString();
 
                     loginUser(emailUser,passUser);
 
+                }else{
+                    Toast.makeText(MainActivity.this,"Error!",Toast.LENGTH_SHORT).show();
                 }
 
             }
