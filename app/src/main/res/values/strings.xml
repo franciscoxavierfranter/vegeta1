@@ -4,6 +4,7 @@
     <string name="mapbox_access_token">pk.eyJ1IjoiZnJhbnRlciIsImEiOiJjbDlucGZka3MwYWJzM29uc212dmV6ajV0In0.DzCeHNNwpIueyDVZhlvkog</string>
 
     <string name="btnIngresa">Ingresa</string>
+    <string name="btnLogout">Cerrar Sesion</string>
     <string name="btnProfesional">Consulta Profesional</string>
     <string name="btnMapa">Consulta Ubicación</string>
     <string name="tv1">PrimerActivity</string>
@@ -23,4 +24,6 @@
     <string name="referencia">Referencia de sonido</string>
     <string name="uPa">Sonido en Pa</string>
     <string name="dB">Sonido en dB</string>
+    <string name="invalidMail">Mail no válido</string>
+    <string name="invalidPass">Contraseña mala</string>
 </resources>

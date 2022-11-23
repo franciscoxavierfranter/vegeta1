@@ -15,6 +15,9 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.FirebaseFirestore;
+
 public class SegundoActivity extends AppCompatActivity {
 
     private Bundle bundle;
@@ -22,22 +25,32 @@ public class SegundoActivity extends AppCompatActivity {
     String[] profesionales={"Nutricionista","Médico","Entrenador","Psicólogo"};
     int[] vprofesional = {R.drawable.vnutri, R.drawable.vmedico, R.drawable.ventrena, R.drawable.vpsico,};
     Spinner spinnerProfesional;
-    Button btnMapa;
+    FirebaseFirestore mFirestore;
+    FirebaseAuth mAuth;
+    Button btnLogOut;
     Button btnLeer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_segundo);
-        //tvSaludo = (TextView) findViewById(R.id.tvSaludo);
-        //bundle = getIntent().getExtras();
-        //String saludo = bundle.getString("nombre");
-        //tvSaludo.append(" " + saludo + " :D");
+        mAuth = FirebaseAuth.getInstance();
+        mFirestore = FirebaseFirestore.getInstance();
+        btnLogOut = findViewById(R.id.btnLogout);
 
         //https://www.youtube.com/watch?v=yBQny_Mt73M spinner
         spinnerProfesional=findViewById(R.id.id_spinner);
         ProfesionalesAdapter profesionalesAdapter = new ProfesionalesAdapter();
         spinnerProfesional.setAdapter(profesionalesAdapter);
+
+        btnLogOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mAuth.signOut();
+                finish();
+                startActivity(new Intent(SegundoActivity.this,MainActivity.class));
+            }
+        });
 
     }
 

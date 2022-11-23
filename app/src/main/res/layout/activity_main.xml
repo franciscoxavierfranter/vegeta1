@@ -49,22 +49,21 @@
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"
             android:hint="Usuario"
-            android:inputType="textPersonName"
+            android:inputType="textEmailAddress"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
         <EditText
-            android:id="@+id/numericContrasena"
+            android:id="@+id/intPass"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
             android:layout_below="@+id/textUsuario"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="20dp"
             android:ems="10"
             android:hint="Contraseña"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"
-            android:inputType="numberPassword"
+            android:inputType="textPassword"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textUsuario" />
@@ -74,13 +73,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:layout_below="@+id/numericContrasena"
+            android:layout_below="@+id/intPass"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"
             android:text="@string/btnIngresa"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/numericContrasena" />
+            app:layout_constraintTop_toBottomOf="@+id/intPass" />
 
     </RelativeLayout>
 </FrameLayout>
